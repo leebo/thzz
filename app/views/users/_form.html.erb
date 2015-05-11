@@ -1,4 +1,4 @@
-<%= simple_form_for(@user) do |f| %>
+<%= simple_form_for(@user, html: { class: "form-horizontal" }, wrapper: :horizontal_form) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -10,7 +10,7 @@
     <%= f.input :used_at %>
   </div>
 
-  <div class="form-actions">
+  <div class="form-horizonta">
     <%= f.button :submit %>
   </div>
 <% end %>
