@@ -1,0 +1,16 @@
+<div class="container">
+
+  <div class= "col-xs-10 col-xs-offset-1 text-center">
+
+    <h1 style="padding: 20px">验证序列号</h1>
+    <% if @result=="ok"  %>
+      <h4><%= flash[:notice] %></h4>
+    <% else %>
+      <h4 class="error"><%= flash[:error] %></h4>
+    <% end %>
+    <%= simple_form_for @user, url: thzz_yz_path  do |f| %>
+      <%= f.input :sn, label: false, placeholder: "序列号"  %>
+      <%= f.submit value: "验证", class: "btn btn-default" %>
+    <% end %>
+  </div>
+</div>

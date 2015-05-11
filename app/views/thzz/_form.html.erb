@@ -1,0 +1,4 @@
+<%= simple_form_for @user, url: thzz_get_path do |f| %>
+  <%= f.input :mobile, label: false, placeholder: "请输入手机号", input_html: {} %>
+  <%= f.submit value: "马上领取",  class: "btn btn-default"  %>
+<% end %>

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'thzz/index'
+  get 'thzz' => 'thzz#index'
+  get 'thzz/yz'
+  post 'thzz/yz'
+  post 'thzz/get' => 'thzz#create'
 
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.

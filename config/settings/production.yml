@@ -1,0 +1,7 @@
+sms:
+  time_out: 2
+  accountSid: aaf98f894b827e71014b95b5954b03d6
+  appId: aaf98f894b827e71014b95b64c7c03d8
+  auth_token: a9b0aff4a9d143cf83195111961e5e99
+  templateId: 1
+  apiurl: https://sandboxapp.cloopen.com:8883

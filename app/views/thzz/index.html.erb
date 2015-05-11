@@ -1,2 +1,16 @@
-<h1>Thzz#index</h1>
-<p>Find me in app/views/thzz/index.html.erb</p>
+<div class="container">
+
+  <div class="row top">
+
+  </div>
+  <div class="col-xs-8 col-xs-offset-2 text-center">
+  <% if !@result %>
+    <%= render "form" %>
+  <% elsif @result == "ok" %>
+    <p><%= flash[:notice] %></p>
+  <% else %>
+    <p><%= flash[:error] %></p>
+  <% end %>
+  </div>
+
+</div>
