@@ -28,6 +28,8 @@ gem 'kaminari'
 
 gem 'bootstrap-sass'
 
+gem 'rails-i18n'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
