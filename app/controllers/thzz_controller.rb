@@ -13,14 +13,14 @@ class ThzzController < ApplicationController
     @user = User.new(user_params)
     @user.gen_sn
     if @user.save
+      session[:mobile] = @user.mobile
       Rails.logger.debug send_sms_yunpian(@user.mobile,
                                           "【炭烤制造】套餐领取码为:#{@user.sn}。地址:南公园步行街。电话:18609000625。")
       flash[:notice] = "恭喜你！已经领取成功,请将此消息转发至朋友圈，并查收您的短信收件箱!"
-      redirect_to action: 'index', result: 'ok'
     else
-      flash[:error] = "对不起你已经领取,请查收您的短信收件箱，此套餐限制一人只能领取一份"
-      redirect_to action: 'index', result: 'error'
+      flash[:notice] = "对不起你已经领取,请查收您的短信收件箱，此套餐限制一人只能领取一份"
     end
+    redirect_to action: 'index'
   end
 
   def yz

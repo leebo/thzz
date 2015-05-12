@@ -4,13 +4,11 @@
 
   </div>
   <div class="col-xs-8 col-xs-offset-2 text-center">
-  <% if !@result %>
-    <%= render "form" %>
-  <% elsif @result == "ok" %>
-    <p><%= flash[:notice] %></p>
-  <% else %>
-    <p><%= flash[:error] %></p>
-  <% end %>
+    <% if !flash[:notice] %>
+      <%= render "form" %>
+    <% else %>
+      <p><%= flash[:notice] %></p>
+    <% end %>
   </div>
 
 </div>
