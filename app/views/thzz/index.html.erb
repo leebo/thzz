@@ -1,14 +1,18 @@
-<div class="container">
 
-  <div class="row top">
-
-  </div>
-  <div class="col-xs-8 col-xs-offset-2 text-center">
+<div class="row bg">
+  <%= image_tag("logo.png", class: "logo") %>
+  <div class="col-xs-8 col-xs-offset-2 text-center mobile_input">
     <% if !flash[:notice] %>
       <%= render "form" %>
     <% else %>
-      <p><%= flash[:notice] %></p>
+      <div class="alert alert-warning">
+        <p><%= flash[:notice] %></p>
+      </div>
     <% end %>
   </div>
+  <div class="col-xs-12 text-center">
 
+    <%= image_tag("wz.png", class: "logo") %>
+  </div>
 </div>
+

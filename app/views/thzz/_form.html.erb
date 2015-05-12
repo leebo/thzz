@@ -1,4 +1,6 @@
 <%= simple_form_for @user, url: thzz_get_path do |f| %>
-  <%= f.input :mobile, label: false, placeholder: "请输入手机号", input_html: {} %>
-  <%= f.submit value: "马上领取",  class: "btn btn-default"  %>
+  <%= f.input :mobile, label: false, placeholder: "请输入手机号", input_html: { class: ""} %>
+  <%= button_to "", class: "btn btn-danger btn-block" do  %>
+    <span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 马上领取
+  <% end %>
 <% end %>
