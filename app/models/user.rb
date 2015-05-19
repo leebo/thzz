@@ -3,12 +3,17 @@
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
+  paginates_per 50
   field :username, type: String
   field :mobile, type: String
   field :age, type: Integer
   field :sex, type: Integer
   field :sn, type: String
   field :used_at, type: Time
+  default_scope -> { order( created_at: :desc ) }
+  scope :not_used, -> { where(used_at: nil)}
+  scope :used, -> { where(:used_at.ne =>  nil)}
+  scope :not_used_by_time, ->(time) { where(:created_at.lt => time)}
 
   validates :mobile, :sn, presence: true
   validates :sn, format: { with: /\d{8}/ }

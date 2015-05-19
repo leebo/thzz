@@ -4,7 +4,15 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all.page(params[:page]).per(50)
+    if params[:used] == "false"
+      @users = User.not_used.page(params[:page])
+    elsif params[:used] == "true"
+      @users = User.used.page(params[:page])
+    elsif params[:used] == "one_month_after"
+      @users = User.not_used_by_time(1.month.ago).page(params[:page])
+    else
+      @users = User.all.page(params[:page])
+    end
   end
 
   # GET /users/1
@@ -62,13 +70,13 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:user).permit(:username, :mobile, :age, :sex, :sn, :used_at)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def user_params
+    params.require(:user).permit(:username, :mobile, :age, :sex, :sn, :used_at)
+  end
 end
