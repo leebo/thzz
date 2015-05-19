@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'thzz' => 'thzz#index'
   get 'thzz/yz'
+  get 'thzz/get' => 'thzz#index'
   post 'thzz/yz'
   post 'thzz/get' => 'thzz#create'
 
