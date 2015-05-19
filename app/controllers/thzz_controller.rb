@@ -15,12 +15,13 @@ class ThzzController < ApplicationController
     if @user.save
       session[:mobile] = @user.mobile
       Rails.logger.debug send_sms_yunpian(@user.mobile,
-                                          "【炭火制造】您的套餐领取码为:#{@user.sn}，进店请出示。地址:南公园步行街。电话:18609000625。")
+      "【炭火制造】您的套餐领取码为:#{@user.sn}，进店请出示。地址:南公园步行街。电话:18609000625。")
       flash[:notice] = "恭喜你！已经领取成功,请将此消息转发至朋友圈，并查收您的短信收件箱!"
+      redirect_to action: 'index'
     else
-      flash[:notice] = "对不起你已经领取,请查收您的短信收件箱，此套餐限制一人只能领取一份"
+      render action: :index
+      return
     end
-    redirect_to action: 'index'
   end
 
   def yz
