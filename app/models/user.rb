@@ -6,6 +6,8 @@ class User
   paginates_per 50
   field :username, type: String
   field :mobile, type: String
+  field :province, type: String
+  field :cityname, type: String
   field :age, type: Integer
   field :sex, type: Integer
   field :sn, type: String
