@@ -31,6 +31,7 @@ gem 'bootstrap-sass'
 gem 'rails-i18n'
 
 gem 'jquery-validation-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
