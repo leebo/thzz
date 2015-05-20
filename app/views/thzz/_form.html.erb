@@ -1,6 +1,6 @@
 <%= simple_form_for @user, url: thzz_get_path do |f| %>
   <%= f.input :mobile, label: false, placeholder: "请输入手机号", input_html: { class: ""} %>
-  <%= button_to "", class: "btn btn-danger btn-block" do  %>
+  <%= button_to "", class: "btn btn-danger btn-block", data: { confirm: "此活动地址在昌吉市延安南路南公园步行街，确认要领取吗？" } do  %>
     <span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 马上领取
   <% end %>
 <% end %>
