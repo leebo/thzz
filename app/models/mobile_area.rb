@@ -12,5 +12,4 @@ class MobileArea
   validates :mobile, :province, :cityname, :isp, presence: true
   validates :mobile, uniqueness: true
 
-  index ({ mobile: 1 }, { unique: true, name: "mobile_index" })
 end
