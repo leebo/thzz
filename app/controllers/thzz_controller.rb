@@ -7,6 +7,7 @@ class ThzzController < ApplicationController
   def index
     @result = params[:result]
     @user = User.new
+    @refer= params[:from]
   end
 
 

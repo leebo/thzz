@@ -1,15 +1,22 @@
 
 <div class="row bg">
   <%= image_tag("logo.png", class: "logo") %>
-  <%= image_tag("text1.png", class: "logo") %>
-  <div class="col-xs-8 col-xs-offset-2 text-center mobile_input">
-    <% if flash[:notice] %>
-      <div class="alert alert-warning">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-    <%= render "form" %>
-  </div>
+  <% if @refer %>
+    <%= image_tag("text3.png", class: "logo") %>
+    <center>
+    <%= image_tag("qr.jpg", class: "logo") %>
+    </center>
+  <% else %>
+    <%= image_tag("text1.png", class: "logo") %>
+    <div class="col-xs-8 col-xs-offset-2 text-center mobile_input">
+      <% if flash[:notice] %>
+        <div class="alert alert-warning">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <%= render "form" %>
+    </div>
+  <% end %>
   <div class="col-xs-12 text-center">
     <%= image_tag("wz.png", class: "logo") %>
     <%= image_tag("text2.png", class: "logo") %>
