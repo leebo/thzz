@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'thzz/get' => 'thzz#index'
   post 'thzz/yz'
   post 'thzz/get' => 'thzz#create'
+  get 'notice' => 'notice#index'
 
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
