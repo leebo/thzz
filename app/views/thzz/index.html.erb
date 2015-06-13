@@ -1,13 +1,13 @@
 
 <div class="row bg">
   <%= image_tag("logo.png", class: "logo") %>
-  <% if @refer %>
+  <% if false  %>
     <%= image_tag("text3.png", class: "logo") %>
     <center>
-    <%= image_tag("qr.jpg", class: "logo") %>
+      <%= image_tag("qr.jpg", class: "logo") %>
     </center>
   <% else %>
-    <%= image_tag("text1.png", class: "logo") %>
+    <%= image_tag("thzz_1.gif", class: "logo") %>
     <div class="col-xs-8 col-xs-offset-2 text-center mobile_input">
       <% if flash[:notice] %>
         <div class="alert alert-warning">
@@ -17,11 +17,51 @@
       <%= render "form" %>
     </div>
   <% end %>
+  <style type="text/css" media="all">
+    .mt10 {
+      margin-top: 10px
+    }
+  </style>
   <div class="col-xs-12 text-center">
-    <%= image_tag("wz.png", class: "logo") %>
-    <%= image_tag("text2.png", class: "logo") %>
-    <span>@2015 YYO.CN 新ICP备15001313号</span>
-    <script src="http://s11.cnzz.com/stat.php?id=1255151966&web_id=1255151966" language="JavaScript"></script>
+    <div class="mt10">
+      <%= image_tag("thzz_cd.png", class: "logo") %>
+    </div>
+    <div class="mt10">
+      <%= image_tag("thzz_2.gif", class: "logo") %>
+    </div>
+    <div class="mt10">
+      <%= image_tag("thzz_3.gif", class: "logo") %>
+    </div>
+    <div class="mt10">
+      <%= image_tag("thzz_4.gif", class: "logo") %>
+    </div>
+    <div class="mt10">
+      <%= image_tag("thzz_5.gif", class: "logo") %>
+    </div>
+    <div class="mt10">
+      <%= image_tag("thzz_6.gif", class: "logo") %>
+    </div>
+    <div class="mt10">
+      <%= image_tag("thzz_7.gif", class: "logo") %>
+    </div>
+    <div class="mt10">
+      <%= image_tag("thzz_8.gif", class: "logo") %>
+    </div>
+    <div class="mt10">
+      <%= image_tag("thzz_9.gif", class: "logo") %>
+    </div>
+    <div class="mt10">
+      <div class="col-xs-6">
+        <%= image_tag("thzz_10.png", class: "logo") %>
+      </div>
+      <div class="col-xs-6">
+        <%= image_tag("thzz_11.gif", class: "logo") %>
+      </div>
+    </div>
+    <div class="mt10">
+      <span>@2015 行者网络 新ICP备15001313号</span><br />
+      <script src="http://s11.cnzz.com/stat.php?id=1255151966&web_id=1255151966" language="JavaScript"></script>
+    </div>
   </div>
 </div>
 
