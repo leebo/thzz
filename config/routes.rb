@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'thzz' => 'thzz#index'
+  get 'thzz/show' => 'thzz#show'
   get 'thzz/yz'
   get 'thzz/get' => 'thzz#index'
   post 'thzz/yz'
